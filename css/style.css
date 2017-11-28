@@ -1,1 +1,6 @@
-
+#moves{
+ float:left;
+}
+#mb_move{
+    float:right;
+}
