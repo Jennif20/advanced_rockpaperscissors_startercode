@@ -19,6 +19,7 @@
 //****************** SERIOUSLY TEST USING console.log()!!! ******************
 
 //GLOBAL VARIABLES
+/*global $*/
 var userChoice = "";
 var computerChoice ="";
 var winner ="";
@@ -26,8 +27,11 @@ var winner ="";
 var choices = ["rock","paper","scissors"];
 
 //FUNCTIONS
-
-
-
+$(document).ready((function() {
+        
+   $("#shoot").click(function(){
+       $("#move").append($("#input").val()); 
+     });
+}));
 // DOCUMENT READY FUNCTION
 
