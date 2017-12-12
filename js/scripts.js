@@ -1,3 +1,5 @@
+/*global $*/
+
 //Class 1:
         // Fork and clone the repo and set up your project workspace and link files
         // Write HTML for your project
@@ -19,19 +21,37 @@
 //****************** SERIOUSLY TEST USING console.log()!!! ******************
 
 //GLOBAL VARIABLES
-/*global $*/
 var userChoice = "";
-var computerChoice ="";
+
+var computerChoice = Math.floor(Math.random()*3+1);  
+
 var winner ="";
 
 var choices = ["rock","paper","scissors"];
 
-//FUNCTIONS
-$(document).ready((function() {
-        
-   $("#shoot").click(function(){
-       $("#move").append($("#input").val()); 
-     });
-}));
+//FUNC
 // DOCUMENT READY FUNCTION
+$( document ).ready(function() {
+        
+   // console.log(computerChoice);
 
+        
+    $("#shoot").click(function(){
+        console.log(computerChoice);
+        
+        $("userChoice").push($("#input").val());
+        
+      $("#move").html($("#input").val()); 
+      
+      
+      if(computerChoice === 1){
+                 $("#mb_move").html(choices[0])
+        }
+         if(computerChoice === 2){
+                $("#mb_move").html(choices[1])
+        }
+         if(computerChoice === 3){
+                $("#mb_move").html(choices[2])
+                }
+         });
+});
