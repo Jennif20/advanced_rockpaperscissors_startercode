@@ -21,37 +21,60 @@
 //****************** SERIOUSLY TEST USING console.log()!!! ******************
 
 //GLOBAL VARIABLES
-var userChoice = "";
-
-var computerChoice = Math.floor(Math.random()*3+1);  
-
-var winner ="";
-
-var choices = ["rock","paper","scissors"];
 
 //FUNC
 // DOCUMENT READY FUNCTION
 $( document ).ready(function() {
+ 
+     $("#shoot").click(function(){
+        // Gobal Variables
+ // true and true  ==
+ // false and true !==
+ // true and false ==!
+ //
         
-   // console.log(computerChoice);
-
         
-    $("#shoot").click(function(){
-        console.log(computerChoice);
+          var userChoice = [];
+          
+          var winner ="";
+          
+          var choices = ["rock","paper","scissors"];
+          
+          var computerChoice = Math.ceil( (Math.random()*3) - 1);
+          
+          var inputValues = $("#input").val();
+         // console.logs
+         $("userChoice").push(inputValues);
+         
+          console.log(inputValues);
+          
+          console.log(computerChoice);
+         
+           console.log(userChoice);
+           
+          
         
-        $("userChoice").push($("#input").val());
+              $("#move").html($("#input").val()); 
         
-      $("#move").html($("#input").val()); 
+        
+                 $("#mb_move").html(choices[computerChoice]);
+            
+ 
+                $("#mb_move").html(choices[computerChoice]);
+            
+          
+                $("#mb_move").html(choices[computerChoice]);
+             
+        
+      // comparing computer Choices and user choice
+     if((inputValues === choices[0]) && (computerChoice === choices[2])){ 
+         $("#text").html("You Lost");
+         $("#IMG").attr("src","https://res.cloudinary.com/teepublic/image/private/s--EMbCISXN--/t_Preview/b_rgb:ffffff,c_limit,f_jpg,h_630,q_90,w_630/v1503238730/production/designs/1837617_0.jpg");
+    
+   }
       
+    
       
-      if(computerChoice === 1){
-                 $("#mb_move").html(choices[0])
-        }
-         if(computerChoice === 2){
-                $("#mb_move").html(choices[1])
-        }
-         if(computerChoice === 3){
-                $("#mb_move").html(choices[2])
-                }
          });
+         
 });
