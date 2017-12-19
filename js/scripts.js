@@ -26,7 +26,7 @@
 // DOCUMENT READY FUNCTION
 $( document ).ready(function() {
  
-     $("#shoot").click(function(){
+  $("#shoot").click(function(){
         // Gobal Variables
  // true and true  ==
  // false and true !==
@@ -34,47 +34,95 @@ $( document ).ready(function() {
  //
         
         
-          var userChoice = [];
+          var userChoice = "";
           
           var winner ="";
           
           var choices = ["rock","paper","scissors"];
           
-          var computerChoice = Math.ceil( (Math.random()*3) - 1);
+          var computerChoice =""
           
-          var inputValues = $("#input").val();
-         // console.logs
-         $("userChoice").push(inputValues);
+          var randomIndex = Math.floor(Math.random()*choices.length);
+          computerChoice =choices[randomIndex];
+        userChoice = $("#input").val();
          
-          console.log(inputValues);
           
-          console.log(computerChoice);
-         
+          
            console.log(userChoice);
-           
+           console.log(computerChoice);
+         
           
         
               $("#move").html($("#input").val()); 
         
         
-                 $("#mb_move").html(choices[computerChoice]);
+                 $("#cmove").html(computerChoice);
             
  
-                $("#mb_move").html(choices[computerChoice]);
+                $("#cmove").html(computerChoice);
             
           
-                $("#mb_move").html(choices[computerChoice]);
+                $("#cmove").html(computerChoice);
+             
              
         
-      // comparing computer Choices and user choice
-     if((inputValues === choices[0]) && (computerChoice === choices[2])){ 
-         $("#text").html("You Lost");
-         $("#IMG").attr("src","https://res.cloudinary.com/teepublic/image/private/s--EMbCISXN--/t_Preview/b_rgb:ffffff,c_limit,f_jpg,h_630,q_90,w_630/v1503238730/production/designs/1837617_0.jpg");
-    
+   // comparing computer Choices and user choice
+     // computer wins
+        //  Rock vs paper
+     if((userChoice === choices[0]) && (computerChoice === choices[1])){ 
+         $("#text").html("You Lost, Computer Wins");
+      }
+     //Paper Vs scissors
+    else if((userChoice === choices[1]) && (computerChoice === choices[2])){
+        $("#text").html("You Lost, Computer Wins");
+      
+     }
+    // scissors Vs Rock
+   else if((userChoice === choices[2]) && (computerChoice === choices[0])){
+         $("#text").html("You Lost, Computer Wins");
    }
-      
+   
+   
+   
+    // Users wins
+    //paper Vs rock
+    else if((userChoice === choices[1]) && (computerChoice === choices[0])){
+       $("#text").html("You win");
+    }
+    //scissors Vs paper
+    else if((userChoice === choices[2]) && (computerChoice ===choices[1])){
+       $("#text").html("You win");
+    }
+    //rock vs scissors
+    else if((userChoice === choices[0]) && (computerChoice === choices[2] )){
+         $("#text").html("You win");
+
+     }
+     // ties
+     // rock VS rock
+     else if ((userChoice === choices[0]) && (computerChoice === choices[0])){
+         
+        $("#text").html("Its a tie try again.");
+     }
+     //paper vs paper
+     else if ((userChoice === choices[1]) && (computerChoice === choices[1])){
+         $("#text").html("its a tie try again!");
+     }
+     //scissors vs scissors
+    else if ((userChoice === choices[2] ) && (computerChoice === choices[2])){
+        $("#text").html("Its a tie try again. :(");
+    }
     
-      
+    
+    
+    
+    
+    
+          
+           
+           
+           
+           
          });
          
 });
