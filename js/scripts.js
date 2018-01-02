@@ -71,15 +71,18 @@ $( document ).ready(function() {
         //  Rock vs paper
      if((userChoice === choices[0]) && (computerChoice === choices[1])){ 
          $("#text").html("You Lost, Computer Wins");
+         $("#IMG").attr("src","https://iwsmt-content-ok2nbdvvyp8jbrhdp.stackpathdns.com/November-19-2011-23-56-17-damnthatswhackAcrushingdefeat.gif");
       }
      //Paper Vs scissors
     else if((userChoice === choices[1]) && (computerChoice === choices[2])){
         $("#text").html("You Lost, Computer Wins");
+        $("#IMG").attr("src","https://cdn.xl.thumbs.canstockphoto.com/rock-paper-scissors-image_csp21302477.jpg");
       
      }
     // scissors Vs Rock
    else if((userChoice === choices[2]) && (computerChoice === choices[0])){
          $("#text").html("You Lost, Computer Wins");
+         $("#IMG").attr("src","https://beardeertshirt.files.wordpress.com/2011/09/rock-paper-scissors-shirt.jpg?w=300&h=300");
    }
    
    
@@ -88,14 +91,17 @@ $( document ).ready(function() {
     //paper Vs rock
     else if((userChoice === choices[1]) && (computerChoice === choices[0])){
        $("#text").html("You win");
+        $("#IMG").attr("src","https://iwsmt-content-ok2nbdvvyp8jbrhdp.stackpathdns.com/November-19-2011-23-56-17-damnthatswhackAcrushingdefeat.gif");
     }
     //scissors Vs paper
     else if((userChoice === choices[2]) && (computerChoice ===choices[1])){
        $("#text").html("You win");
+       $("#IMG").attr("src","https://cdn.xl.thumbs.canstockphoto.com/rock-paper-scissors-image_csp21302477.jpg");
     }
     //rock vs scissors
     else if((userChoice === choices[0]) && (computerChoice === choices[2] )){
          $("#text").html("You win");
+         $("#IMG").attr("src","https://beardeertshirt.files.wordpress.com/2011/09/rock-paper-scissors-shirt.jpg?w=300&h=300");
 
      }
      // ties
@@ -103,14 +109,17 @@ $( document ).ready(function() {
      else if ((userChoice === choices[0]) && (computerChoice === choices[0])){
          
         $("#text").html("Its a tie try again.");
+        $("#IMG").attr("src","http://www.thydemonsbescribblin.com/uploads/2/9/2/8/29282825/5895759_orig.jpg?521");
      }
      //paper vs paper
      else if ((userChoice === choices[1]) && (computerChoice === choices[1])){
          $("#text").html("its a tie try again!");
+         $("#IMG").attr("src","http://www.thydemonsbescribblin.com/uploads/2/9/2/8/29282825/5895759_orig.jpg?521");
      }
      //scissors vs scissors
     else if ((userChoice === choices[2] ) && (computerChoice === choices[2])){
         $("#text").html("Its a tie try again. :(");
+        $("#IMG").attr("src","http://www.thydemonsbescribblin.com/uploads/2/9/2/8/29282825/5895759_orig.jpg?521");
     }
     
     
